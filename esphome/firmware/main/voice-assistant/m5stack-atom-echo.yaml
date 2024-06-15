@@ -21,6 +21,17 @@ dashboard_import:
   package_import_url: github://esphome/firmware/voice-assistant/m5stack-atom-echo.yaml@main
 
 wifi:
+  ssid: ${wifi_ssid}
+  password: ${wifi_password}
+
+  manual_ip:
+    # Set this to the IP of the ESP
+    static_ip: 192.168.3.231
+    # Set this to the IP address of the router. Often ends with .1
+    gateway: 192.168.3.1
+    # The subnet of the network. 255.255.255.0 works for most home networks.
+    subnet: 255.255.255.0
+
   on_connect:
     - delay: 5s  # Gives time for improv results to be transmitted
     - ble.disable:
