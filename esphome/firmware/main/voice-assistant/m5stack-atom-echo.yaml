@@ -1,7 +1,7 @@
 ---
 esphome:
-  name: m5stack-atom-echo
-  friendly_name: M5Stack Atom Echo
+  name: ${name}
+  friendly_name: ${friendly_name}
   name_add_mac_suffix: true
   project:
     name: m5stack.atom-echo-voice-assistant
@@ -15,7 +15,11 @@ esp32:
 
 logger:
 api:
+  encryption:
+    key: ${encryption_key}
+
 ota:
+  password: ${ota_password}
 
 dashboard_import:
   package_import_url: github://esphome/firmware/voice-assistant/m5stack-atom-echo.yaml@main
@@ -26,11 +30,11 @@ wifi:
 
   manual_ip:
     # Set this to the IP of the ESP
-    static_ip: 192.168.3.231
+    static_ip: ${ip_adress}
     # Set this to the IP address of the router. Often ends with .1
-    gateway: 192.168.3.1
+    gateway: ${gateway}
     # The subnet of the network. 255.255.255.0 works for most home networks.
-    subnet: 255.255.255.0
+    subnet: ${subnet}
 
   on_connect:
     - delay: 5s  # Gives time for improv results to be transmitted
