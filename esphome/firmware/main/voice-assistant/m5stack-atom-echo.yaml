@@ -18,6 +18,6 @@ wifi:
   password: ${wifi_password}
 
   manual_ip:
-    static_ip: ${ip_adress}
+    static_ip: ${ip_address}
     gateway: ${gateway}
     subnet: ${subnet}
