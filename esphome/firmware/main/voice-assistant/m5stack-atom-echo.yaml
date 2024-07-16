@@ -16,6 +16,7 @@ ota:
     password: ${ota_password}
   - platform: http_request
     id: ota_http_request
+    password: ${ota_password}
 
 wifi:
   ssid: ${wifi_ssid}
