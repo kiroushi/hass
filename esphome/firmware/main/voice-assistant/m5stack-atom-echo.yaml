@@ -12,13 +12,7 @@ api:
     
 ota:
   - platform: esphome
-    id: ota_esphome
     password: ${ota_password}
-  - platform: http_request
-    id: ota_http_request
-    password: ${ota_password}
-
-http_request:
 
 wifi:
   ssid: ${wifi_ssid}
