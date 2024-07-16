@@ -13,7 +13,15 @@ api:
 ota:
   - platform: esphome
     password: ${ota_password}
+  - platform: http_request
+    id: ota_http_request
 
+update:
+  - platform: http_request
+    id: update_http_request
+    name: Firmware
+    source: https://firmware.esphome.io/voice-assistant/m5stack-atom-echo/manifest.json
+    
 wifi:
   ssid: ${wifi_ssid}
   password: ${wifi_password}
