@@ -18,6 +18,8 @@ ota:
     id: ota_http_request
     password: ${ota_password}
 
+http_request:
+
 wifi:
   ssid: ${wifi_ssid}
   password: ${wifi_password}
